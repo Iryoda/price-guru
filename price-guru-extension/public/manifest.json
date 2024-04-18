@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Price Guru",
+    "version": "1.0.0",
+    "description": "Guru guru guru",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": ["activeTab", "scripting", "background"],
+    "host_permissions": ["https://*/*", "http://*/*"]
+}
