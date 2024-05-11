@@ -48,7 +48,6 @@ func (wr MongoWatcherRepository) FindAllByUserId(id string) (*[]entities.Watcher
 	}
 
 	return &watchers, nil
-
 }
 
 func (wr MongoWatcherRepository) FindById(id string) (entities.Watcher, error) {

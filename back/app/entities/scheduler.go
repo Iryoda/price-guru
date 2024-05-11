@@ -7,9 +7,10 @@ import (
 )
 
 type Scheduler struct {
-	Id     string    `json:"id"`
-	Start  time.Time `json:"start"`
-	UserId string    `json:"userId"`
+	Id      string    `json:"id"`
+	Start   time.Time `json:"start"`
+	UserId  string    `json:"userId"`
+	LastRun time.Time `json:"lastRun"`
 }
 
 type CreateScheduler struct {
@@ -24,6 +25,7 @@ func NewScheduler(data CreateScheduler) (*Scheduler, error) {
 	}
 
 	return &Scheduler{
-		Start: data.Start,
+		Start:   data.Start,
+		LastRun: time.Now(),
 	}, nil
 }
